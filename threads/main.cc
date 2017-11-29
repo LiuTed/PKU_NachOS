@@ -88,6 +88,9 @@ main(int argc, char **argv)
 
     DEBUG('t', "Entering main");
     (void) Initialize(argc, argv);
+#ifdef THREADS
+    testnum = 1;
+#endif
     
     for (argc--, argv++; argc > 0; argc -= argCount, argv += argCount) {
       argCount = 1;
@@ -102,7 +105,6 @@ main(int argc, char **argv)
         break;
       }
 */
-    	testnum = 1;
     	if(!strcmp(*argv, "-q"))
     	{
       		ASSERT(argc > 1);

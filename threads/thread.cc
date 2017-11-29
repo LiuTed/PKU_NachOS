@@ -78,6 +78,24 @@ Thread::~Thread()
     ASSERT(this != currentThread);
     if (stack != NULL)
 	DeallocBoundedArray((char *) stack, StackSize * sizeof(int));
+#ifdef USER_PROGRAM
+    for(std::set<int>::iterator i = fds.begin();
+        i != fds.end(); ++i)
+    {
+        int fd = *i;
+        ASSERT(fd >= 0 && fd < NumFD);
+        ASSERT(machine->fd_table[fd].file);
+        int cnt = --machine->fd_table[fd].cnt;
+        if(cnt == 0 && fd >= 2)
+        {
+            delete machine->fd_table[fd].file;
+            machine->fd_table[fd].file = NULL;
+        }
+    }
+    char buf[32];
+    snprintf(buf, 32, "vm_%d", tid);
+    fileSystem->Remove(buf);
+#endif
     thread_list[tid] = NULL;
     printf("Thread \"%s\"(tid=%d) deleted\n", name, tid);
 }

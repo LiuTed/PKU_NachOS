@@ -121,6 +121,85 @@ Machine::ReadMem(int addr, int size, int *value)
 	return (TRUE);
 }
 
+static bool ReadMemNoExcept(int addr, int size, char *val)
+{
+	int data;
+	ExceptionType exception;
+	int physicalAddress;
+	exception = machine->Translate(addr, &physicalAddress, size, FALSE);
+	if (exception != NoException)
+	{
+		while(exception == PageFaultException)
+		{
+			machine->RaiseException(exception, addr);
+			exception = machine->Translate(addr, &physicalAddress, size, FALSE);
+		}
+		if(exception != NoException) return FALSE;
+	}
+	switch (size)
+	{
+		case 1:
+		data = machine->mainMemory[physicalAddress];
+		*val = data;
+		break;
+
+		case 2:
+		data = *(unsigned short *) &machine->mainMemory[physicalAddress];
+		*val = ShortToHost(data);
+		break;
+
+		case 4:
+		data = *(unsigned int *) &machine->mainMemory[physicalAddress];
+		*val = WordToHost(data);
+		break;
+
+		default: ASSERT(FALSE);
+	}
+	return TRUE;
+}
+
+bool
+Machine::ReadMemStr(int addr, int *len, char* &buf)
+{
+	DEBUG('a', "Reading str at VA 0x%x\n", addr);
+
+	int l = 0;
+	char c;
+	while(true)
+	{
+		if(!ReadMemNoExcept(addr+l, 1, &c))
+			return FALSE;
+		l++;
+		if(!c) break;
+	}
+	if(len) *len=l;
+	buf = new char[l+1];
+	l = 0;
+	while(true)
+	{
+		char c;
+		if(!ReadMemNoExcept(addr+l, 1, &c))
+			return FALSE;
+		buf[l++] = c;
+		if(!c) break;
+	}
+
+	DEBUG('a', "\tstr read = %s\n", buf);
+	return (TRUE);
+}
+bool
+Machine::ReadMemArr(int addr, int len, char* value)
+{
+	DEBUG('a', "Reading array at VA 0x%x\n", addr);
+
+	for(int i = 0; i < len; i++)
+	{
+		if(!ReadMemNoExcept(addr+i, 1, value+i))
+			return FALSE;
+	}
+	return (TRUE);
+}
+
 //----------------------------------------------------------------------
 // Machine::WriteMem
 //      Write "size" (1, 2, or 4) bytes of the contents of "value" into
@@ -166,6 +245,53 @@ Machine::WriteMem(int addr, int size, int value)
 	}
 
 	return TRUE;
+}
+
+static bool WriteMemNoExcept(int addr, int size, int value)
+{
+	int data;
+	ExceptionType exception;
+	int physicalAddress;
+	exception = machine->Translate(addr, &physicalAddress, size, TRUE);
+	if (exception != NoException)
+	{
+		while(exception == PageFaultException)
+		{
+			machine->RaiseException(exception, addr);
+			exception = machine->Translate(addr, &physicalAddress, size, TRUE);
+		}
+		if(exception != NoException) return FALSE;
+	}
+	switch (size) {
+		case 1:
+		machine->mainMemory[physicalAddress] = (unsigned char) (value & 0xff);
+		break;
+
+		case 2:
+		*(unsigned short *) &machine->mainMemory[physicalAddress]
+		= ShortToMachine((unsigned short) (value & 0xffff));
+		break;
+
+		case 4:
+		*(unsigned int *) &machine->mainMemory[physicalAddress]
+		= WordToMachine((unsigned int) value);
+		break;
+
+		default: ASSERT(FALSE);
+	}
+	return TRUE;
+}
+bool
+Machine::WriteMemArr(int addr, int len, char* value)
+{
+	DEBUG('a', "Reading array at VA 0x%x\n", addr);
+
+	for(int i = 0; i < len; i++)
+	{
+		if(!WriteMemNoExcept(addr+i, 1, (int)value[i]))
+			return FALSE;
+	}
+	return (TRUE);
 }
 
 //----------------------------------------------------------------------

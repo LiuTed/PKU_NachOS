@@ -24,6 +24,7 @@
 #include "copyright.h"
 #include "utility.h"
 #include "translate.h"
+#include "openfile.h"
 #include "disk.h"
 
 // Definitions related to the size, and format of user memory
@@ -71,6 +72,8 @@ enum ExceptionType { NoException,           // Everything ok!
 
 #define NumTotalRegs 	40
 
+#define NumFD 16384
+
 // The following class defines an instruction, represented in both
 // 	undecoded binary form
 //      decoded to identify
@@ -89,6 +92,15 @@ class Instruction {
     char rs, rt, rd; // Three registers from instruction.
     int extra;       // Immediate or target or shamt field or offset.
                      // Immediates are sign-extended.
+};
+
+class FDEntry
+{
+public:
+    OpenFile *file;
+    int cnt;
+    FDEntry(){file = NULL; cnt = 0;}
+    ~FDEntry(){delete file;}
 };
 
 // The following class defines the simulated host workstation hardware, as 
@@ -128,6 +140,9 @@ class Machine {
     
     bool ReadMem(int addr, int size, int* value);
     bool WriteMem(int addr, int size, int value);
+    bool ReadMemStr(int addr, int *len, char* &buf);
+    bool ReadMemArr(int addr, int len, char* value);
+    bool WriteMemArr(int addr, int size, char* value);
     				// Read or write 1, 2, or 4 bytes of virtual 
 				// memory (at addr).  Return FALSE if a 
 				// correct translation couldn't be found.
@@ -191,6 +206,9 @@ class Machine {
     }
     unsigned int getnew(unsigned int, int);
     unsigned int find(unsigned int, int);
+
+    FDEntry *fd_table;
+
 
   private:
     bool singleStep;		// drop back into the debugger after each

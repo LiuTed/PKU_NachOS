@@ -130,6 +130,22 @@ Yield:
 	j	$31
 	.end Yield
 
+	.globl PutChar
+	.ent PutChar
+PutChar:
+	addiu $2,$0,SC_PutChar
+	syscall
+	j	$31
+	.end PutChar
+
+	.globl PutInt
+	.ent PutInt
+PutInt:
+	addiu $2,$0,SC_PutInt
+	syscall
+	j	$31
+	.end PutInt
+
 /* dummy function to keep gcc happy */
         .globl  __main
         .ent    __main

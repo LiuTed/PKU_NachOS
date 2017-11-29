@@ -77,6 +77,7 @@ Machine::Machine(bool debug)
     tlb = NULL;
 //    pageTable = NULL;
 #endif
+    fd_table = new FDEntry[NumFD];
 
     singleStep = debug;
     CheckEndian();
@@ -93,6 +94,7 @@ Machine::~Machine()
     delete [] InvPageTable;
     if (tlb != NULL)
         delete [] tlb;
+    delete[] fd_table;
 }
 
 //----------------------------------------------------------------------

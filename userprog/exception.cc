@@ -24,6 +24,7 @@
 #include "copyright.h"
 #include "system.h"
 #include "syscall.h"
+#include "openfile.h"
 
 int SwapPage(unsigned int vpn, int tid)
 {
@@ -101,6 +102,13 @@ int SwapPage(unsigned int vpn, int tid)
 //	are in machine.h.
 //----------------------------------------------------------------------
 
+static void IncPC()
+{
+	machine->registers[PrevPCReg] = machine->registers[PCReg];
+	machine->registers[PCReg] = machine->registers[NextPCReg];
+	machine->registers[NextPCReg] += 4;
+}
+
 void
 ExceptionHandler(ExceptionType which)
 {
@@ -108,26 +116,136 @@ ExceptionHandler(ExceptionType which)
 
 	if (which == SyscallException)
 	{
-		
 		switch(type)
 		{
 			case SC_Halt:
+			{
 			DEBUG('a', "Shutdown, initiated by user program.\n");
 			interrupt->Halt();
 			break;
+			}
 			
 			case SC_Exit:
+			{
 			DEBUG('a', "program exited.\n");
 			printf("%s exited with code %d\n",
 				currentThread->getName(), machine->ReadRegister(4));
-			//Exit(machine->ReadRegister(4));
-			currentThread->Finish();
+			Exit(machine->ReadRegister(4));
+			//currentThread->Finish();
 			break;
+			}
+
+			case SC_Create:
+			{
+			DEBUG('a', "syscall: create\n");
+			char *name;
+			int nameaddr = machine->ReadRegister(4);
+			machine->ReadMemStr(nameaddr, NULL, name);
+			bool succ = fileSystem->Create(name);
+			if(succ)
+				DEBUG('a', "\tcreate succeed\n");
+			else
+				DEBUG('a', "\tcreate failed\n");
+			delete[] name;
+			break;
+			}
+
+			case SC_Open:
+			{
+			DEBUG('a', "syscall: open\n");
+			char *name;
+			int nameaddr = machine->ReadRegister(4);
+			machine->ReadMemStr(nameaddr, NULL, name);
+			int fd = -1;
+			OpenFile *f = fileSystem->Open(name);
+			if(!f)
+			{
+				DEBUG('a', "\topen failed\n");
+			}
+			for(int i = 2; i < NumFD; i++)
+			{
+				if(!machine->fd_table[i].file)
+				{
+					machine->fd_table[i].file = f;
+					machine->fd_table[i].cnt = 1;
+					fd = i;
+					break;
+				}
+			}
+			DEBUG('a', "\tresult fd:%d\n", fd);
+			machine->WriteRegister(2, fd);
+			currentThread->fds.insert(fd);
+			delete[] name;
+			break;
+			}
+
+			case SC_Write:
+			{
+			DEBUG('a', "syscall: write\n");
+			int bufaddr = machine->ReadRegister(4);
+			int size = machine->ReadRegister(5);
+			int fd = machine->ReadRegister(6);
+			char *buffer = new char[size];
+			machine->ReadMemArr(bufaddr, size, buffer);
+			ASSERT(fd >= 0 && fd < NumFD);
+			OpenFile *f = machine->fd_table[fd].file;
+			ASSERT(f);
+			f->Write(buffer, size);
+			delete[] buffer;
+			break;
+			}
+
+			case SC_Read:
+			{
+			DEBUG('a', "syscall: read\n");
+			int bufaddr = machine->ReadRegister(4);
+			int size = machine->ReadRegister(5);
+			int fd = machine->ReadRegister(6);
+			char *buffer = new char[size];
+			ASSERT(fd >= 0 && fd < NumFD);
+			OpenFile *f = machine->fd_table[fd].file;
+			ASSERT(f);
+			int res = f->Read(buffer, size);
+			machine->WriteRegister(2, res);
+			machine->WriteMemArr(bufaddr, res, buffer);
+			delete[] buffer;
+			break;
+			}
+
+			case SC_Close:
+			{
+			DEBUG('a', "syscall: close\n");
+			int fd = machine->ReadRegister(4);
+			ASSERT(fd >= 0 && fd < NumFD);
+			ASSERT(machine->fd_table[fd].file);
+			int cnt = --machine->fd_table[fd].cnt;
+			if(cnt == 0)
+			{
+				DEBUG('a', "\tfile closed\n");
+				delete machine->fd_table[fd].file;
+				machine->fd_table[fd].file = NULL;
+			}
+			currentThread->fds.erase(fd);
+			break;
+			}
+
+			case SC_PutChar:
+			{
+			putchar(machine->ReadRegister(4));
+			break;
+			}
+
+			case SC_PutInt:
+			{
+			printf("%d", machine->ReadRegister(4));
+			break;
+			}
 
 			default:
 			printf("unknown syscall\n");
 			ASSERT(FALSE);
 		}
+		IncPC();
 	}
 	else if(which == PageFaultException)
 	{
