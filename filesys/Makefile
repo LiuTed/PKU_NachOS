@@ -41,20 +41,14 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/thread.h \
  ../machine/machine.h ../threads/utility.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -67,11 +61,23 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -82,9 +88,6 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -96,7 +99,6 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 list.o: ../threads/list.cc /usr/include/stdc-predef.h \
@@ -129,21 +131,15 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/system.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h ../userprog/bitmap.h \
- ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -156,11 +152,22 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/synch.h \
+ ../threads/system.h ../machine/interrupt.h ../machine/stats.h \
+ ../machine/timer.h ../userprog/bitmap.h /usr/include/c++/5/stdexcept \
+ /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -171,9 +178,6 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -185,7 +189,6 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
@@ -203,21 +206,14 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../machine/machine.h ../threads/utility.h \
- ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h \
- ../filesys/filesys.h ../filesys/openfile.h ../filesys/rwlock.h \
- ../threads/list.h ../machine/disk.h ../threads/list.h \
- ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
- ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../machine/translate.h ../filesys/openfile.h ../filesys/rwlock.h \
+ ../threads/list.h ../machine/disk.h ../userprog/addrspace.h \
+ ../filesys/filesys.h ../filesys/openfile.h ../machine/disk.h \
+ /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -230,11 +226,23 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/list.h \
+ ../threads/system.h ../threads/scheduler.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -245,9 +253,6 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -259,7 +264,6 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 synchlist.o: ../threads/synchlist.cc /usr/include/stdc-predef.h \
@@ -278,9 +282,37 @@ synchlist.o: ../threads/synchlist.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/synch.h ../threads/thread.h \
  ../machine/machine.h ../threads/utility.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
+ /usr/include/c++/5/bits/functexcept.h \
+ /usr/include/c++/5/bits/exception_defines.h \
+ /usr/include/c++/5/bits/cpp_type_traits.h \
+ /usr/include/c++/5/ext/type_traits.h \
+ /usr/include/c++/5/ext/numeric_traits.h \
+ /usr/include/c++/5/bits/stl_pair.h /usr/include/c++/5/bits/move.h \
+ /usr/include/c++/5/bits/concept_check.h \
+ /usr/include/c++/5/bits/stl_iterator_base_types.h \
+ /usr/include/c++/5/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
+ /usr/include/c++/5/bits/ptr_traits.h \
+ /usr/include/c++/5/bits/predefined_ops.h \
+ /usr/include/c++/5/bits/allocator.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
+ /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h
 system.o: ../threads/system.cc /usr/include/stdc-predef.h \
  ../threads/copyright.h ../threads/system.h ../threads/utility.h \
  ../threads/bool.h ../machine/sysdep.h ../threads/copyright.h \
@@ -296,21 +328,15 @@ system.o: ../threads/system.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -323,11 +349,23 @@ system.o: ../threads/system.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -338,9 +376,6 @@ system.o: ../threads/system.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -352,7 +387,6 @@ system.o: ../threads/system.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
@@ -370,21 +404,14 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../machine/machine.h ../threads/utility.h \
- ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h \
- ../filesys/filesys.h ../filesys/openfile.h ../filesys/rwlock.h \
- ../threads/list.h ../machine/disk.h ../threads/switch.h \
- ../threads/synch.h ../threads/list.h ../threads/system.h \
- ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/translate.h ../filesys/openfile.h ../filesys/rwlock.h \
+ ../threads/list.h ../machine/disk.h ../userprog/addrspace.h \
+ ../filesys/filesys.h ../filesys/openfile.h ../machine/disk.h \
+ /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -397,11 +424,23 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/switch.h \
+ ../threads/synch.h ../threads/list.h ../threads/system.h \
+ ../threads/scheduler.h ../machine/interrupt.h ../machine/stats.h \
+ ../machine/timer.h ../userprog/bitmap.h /usr/include/c++/5/stdexcept \
+ /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -412,9 +451,6 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -426,7 +462,6 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 utility.o: ../threads/utility.cc /usr/include/stdc-predef.h \
@@ -458,21 +493,15 @@ threadtest.o: ../threads/threadtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -485,11 +514,23 @@ threadtest.o: ../threads/threadtest.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -500,9 +541,6 @@ threadtest.o: ../threads/threadtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -514,7 +552,6 @@ threadtest.o: ../threads/threadtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h ../machine/elevatortest.h
 interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
@@ -533,20 +570,14 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/thread.h \
  ../machine/machine.h ../threads/utility.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -559,11 +590,23 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -574,9 +617,6 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -588,7 +628,6 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 sysdep.o: ../machine/sysdep.cc /usr/include/stdc-predef.h \
@@ -649,21 +688,14 @@ sysdep.o: ../machine/sysdep.cc /usr/include/stdc-predef.h \
  ../machine/interrupt.h ../threads/list.h ../threads/copyright.h \
  ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
  ../threads/system.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
- ../filesys/rwlock.h ../machine/disk.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h ../userprog/bitmap.h \
- ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
+ ../filesys/rwlock.h ../machine/disk.h ../userprog/addrspace.h \
+ ../filesys/filesys.h ../filesys/openfile.h ../machine/disk.h \
+ /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -676,11 +708,23 @@ sysdep.o: ../machine/sysdep.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -688,9 +732,6 @@ sysdep.o: ../machine/sysdep.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/cctype /usr/include/ctype.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -700,7 +741,6 @@ sysdep.o: ../machine/sysdep.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/timex.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 stats.o: ../machine/stats.cc /usr/include/stdc-predef.h \
@@ -733,20 +773,14 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/utility.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -759,11 +793,23 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -774,9 +820,6 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -788,7 +831,6 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 elevatortest.o: ../machine/elevatortest.cc /usr/include/stdc-predef.h \
@@ -807,9 +849,38 @@ elevatortest.o: ../machine/elevatortest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/list.h ../threads/utility.h \
  ../threads/synch.h ../threads/thread.h ../machine/machine.h \
- ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h \
- ../filesys/filesys.h ../filesys/openfile.h ../filesys/rwlock.h \
- ../machine/disk.h ../threads/list.h ../threads/thread.h
+ ../machine/translate.h ../filesys/openfile.h ../filesys/rwlock.h \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
+ /usr/include/c++/5/bits/functexcept.h \
+ /usr/include/c++/5/bits/exception_defines.h \
+ /usr/include/c++/5/bits/cpp_type_traits.h \
+ /usr/include/c++/5/ext/type_traits.h \
+ /usr/include/c++/5/ext/numeric_traits.h \
+ /usr/include/c++/5/bits/stl_pair.h /usr/include/c++/5/bits/move.h \
+ /usr/include/c++/5/bits/concept_check.h \
+ /usr/include/c++/5/bits/stl_iterator_base_types.h \
+ /usr/include/c++/5/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
+ /usr/include/c++/5/bits/ptr_traits.h \
+ /usr/include/c++/5/bits/predefined_ops.h \
+ /usr/include/c++/5/bits/allocator.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
+ /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/list.h \
+ ../threads/thread.h
 elevator.o: ../machine/elevator.cc /usr/include/stdc-predef.h \
  ../threads/copyright.h ../machine/elevator.h ../threads/utility.h \
  ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h \
@@ -826,20 +897,14 @@ elevator.o: ../machine/elevator.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/list.h ../threads/utility.h \
  ../threads/system.h ../threads/thread.h ../machine/machine.h \
- ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h \
- ../filesys/filesys.h ../filesys/openfile.h ../filesys/rwlock.h \
- ../machine/disk.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/translate.h ../filesys/openfile.h ../filesys/rwlock.h \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -852,11 +917,23 @@ elevator.o: ../machine/elevator.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -867,9 +944,6 @@ elevator.o: ../machine/elevator.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -881,7 +955,6 @@ elevator.o: ../machine/elevator.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
@@ -899,21 +972,15 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -926,11 +993,23 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -941,9 +1020,6 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -955,7 +1031,6 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h ../userprog/addrspace.h ../bin/noff.h
 bitmap.o: ../userprog/bitmap.cc /usr/include/stdc-predef.h \
@@ -989,21 +1064,15 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1016,11 +1085,23 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1031,9 +1112,6 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1045,7 +1123,6 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h ../userprog/syscall.h
 progtest.o: ../userprog/progtest.cc /usr/include/stdc-predef.h \
@@ -1063,21 +1140,15 @@ progtest.o: ../userprog/progtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1090,11 +1161,23 @@ progtest.o: ../userprog/progtest.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1105,9 +1188,6 @@ progtest.o: ../userprog/progtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1119,7 +1199,6 @@ progtest.o: ../userprog/progtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h ../machine/console.h ../userprog/addrspace.h
 console.o: ../machine/console.cc /usr/include/stdc-predef.h \
@@ -1138,20 +1217,14 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/utility.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1164,11 +1237,23 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1179,9 +1264,6 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1193,7 +1275,6 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
@@ -1210,22 +1291,16 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/_G_config.h /usr/include/wchar.h ../threads/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
- /usr/include/xlocale.h ../machine/translate.h ../machine/disk.h \
- ../threads/system.h ../threads/utility.h ../threads/thread.h \
+ /usr/include/xlocale.h ../machine/translate.h ../filesys/openfile.h \
+ ../filesys/rwlock.h ../threads/list.h ../threads/utility.h \
+ ../machine/disk.h ../threads/system.h ../threads/thread.h \
  ../machine/machine.h ../userprog/addrspace.h ../filesys/filesys.h \
- ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1238,11 +1313,23 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1253,9 +1340,6 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1267,7 +1351,6 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
@@ -1284,23 +1367,16 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/_G_config.h /usr/include/wchar.h ../threads/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
- /usr/include/xlocale.h ../machine/translate.h ../machine/disk.h \
- ../machine/mipssim.h ../threads/system.h ../threads/utility.h \
+ /usr/include/xlocale.h ../machine/translate.h ../filesys/openfile.h \
+ ../filesys/rwlock.h ../threads/list.h ../threads/utility.h \
+ ../machine/disk.h ../machine/mipssim.h ../threads/system.h \
  ../threads/thread.h ../machine/machine.h ../userprog/addrspace.h \
- ../filesys/filesys.h ../filesys/openfile.h ../filesys/rwlock.h \
- ../threads/list.h ../machine/disk.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h ../userprog/bitmap.h \
- ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../filesys/filesys.h ../filesys/openfile.h ../machine/disk.h \
+ /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1313,11 +1389,23 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1328,9 +1416,6 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1342,7 +1427,6 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
@@ -1359,22 +1443,16 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/_G_config.h /usr/include/wchar.h ../threads/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
- /usr/include/xlocale.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ /usr/include/xlocale.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../threads/utility.h \
- ../machine/disk.h ../threads/system.h ../threads/thread.h \
- ../machine/machine.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h ../threads/system.h \
+ ../threads/thread.h ../machine/machine.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1387,11 +1465,23 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1402,9 +1492,6 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1416,7 +1503,6 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 directory.o: ../filesys/directory.cc /usr/include/stdc-predef.h \
@@ -1453,21 +1539,15 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../machine/machine.h \
- ../threads/utility.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../threads/utility.h ../machine/translate.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1480,11 +1560,23 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1495,9 +1587,6 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1509,7 +1598,6 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h ../filesys/filehdr.h
 filesys.o: ../filesys/filesys.cc /usr/include/stdc-predef.h \
@@ -1547,20 +1635,13 @@ fstest.o: ../filesys/fstest.cc /usr/include/stdc-predef.h \
  /usr/include/xlocale.h ../filesys/filesys.h ../filesys/openfile.h \
  ../filesys/rwlock.h ../threads/list.h ../threads/utility.h \
  ../machine/disk.h ../threads/system.h ../threads/thread.h \
- ../machine/machine.h ../machine/translate.h ../machine/disk.h \
- ../userprog/addrspace.h ../filesys/filesys.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h ../userprog/bitmap.h \
- ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../machine/machine.h ../machine/translate.h ../filesys/openfile.h \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1573,11 +1654,23 @@ fstest.o: ../filesys/fstest.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1588,9 +1681,6 @@ fstest.o: ../filesys/fstest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1602,7 +1692,6 @@ fstest.o: ../filesys/fstest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h ../threads/thread.h ../filesys/pipe.h
 openfile.o: ../filesys/openfile.cc /usr/include/stdc-predef.h \
@@ -1625,18 +1714,12 @@ openfile.o: ../filesys/openfile.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/timex.h ../filesys/openfile.h \
  ../threads/system.h ../threads/thread.h ../machine/machine.h \
  ../machine/translate.h ../machine/disk.h ../userprog/addrspace.h \
- ../filesys/filesys.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../filesys/filesys.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1649,11 +1732,22 @@ openfile.o: ../filesys/openfile.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h /usr/include/c++/5/stdexcept \
+ /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1664,9 +1758,6 @@ openfile.o: ../filesys/openfile.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1676,7 +1767,6 @@ openfile.o: ../filesys/openfile.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 synchdisk.o: ../filesys/synchdisk.cc /usr/include/stdc-predef.h \
@@ -1695,9 +1785,37 @@ synchdisk.o: ../filesys/synchdisk.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/synch.h ../threads/thread.h \
  ../threads/utility.h ../machine/machine.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../threads/list.h
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
+ /usr/include/c++/5/bits/functexcept.h \
+ /usr/include/c++/5/bits/exception_defines.h \
+ /usr/include/c++/5/bits/cpp_type_traits.h \
+ /usr/include/c++/5/ext/type_traits.h \
+ /usr/include/c++/5/ext/numeric_traits.h \
+ /usr/include/c++/5/bits/stl_pair.h /usr/include/c++/5/bits/move.h \
+ /usr/include/c++/5/bits/concept_check.h \
+ /usr/include/c++/5/bits/stl_iterator_base_types.h \
+ /usr/include/c++/5/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
+ /usr/include/c++/5/bits/ptr_traits.h \
+ /usr/include/c++/5/bits/predefined_ops.h \
+ /usr/include/c++/5/bits/allocator.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
+ /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/list.h
 disk.o: ../machine/disk.cc /usr/include/stdc-predef.h \
  ../threads/copyright.h ../machine/disk.h ../threads/utility.h \
  ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h \
@@ -1714,20 +1832,14 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/utility.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
+ ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
- ../filesys/rwlock.h ../threads/list.h ../machine/disk.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/synch.h \
- ../userprog/bitmap.h ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1740,11 +1852,23 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1755,9 +1879,6 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1769,7 +1890,6 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 rwlock.o: ../filesys/rwlock.cc /usr/include/stdc-predef.h \
@@ -1788,20 +1908,13 @@ rwlock.o: ../filesys/rwlock.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/thread.h \
  ../machine/machine.h ../threads/utility.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
- ../filesys/openfile.h ../machine/disk.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h ../userprog/bitmap.h \
- ../filesys/openfile.h /usr/include/c++/5/stdexcept \
- /usr/include/c++/5/exception \
+ ../filesys/openfile.h ../machine/disk.h ../userprog/addrspace.h \
+ ../filesys/filesys.h ../filesys/openfile.h ../machine/disk.h \
+ /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1814,11 +1927,23 @@ rwlock.o: ../filesys/rwlock.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1829,9 +1954,6 @@ rwlock.o: ../filesys/rwlock.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1843,7 +1965,6 @@ rwlock.o: ../filesys/rwlock.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 synchconsole.o: ../filesys/synchconsole.cc /usr/include/stdc-predef.h \
@@ -1862,9 +1983,37 @@ synchconsole.o: ../filesys/synchconsole.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/synch.h ../threads/thread.h \
  ../threads/utility.h ../machine/machine.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h ../threads/list.h
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
+ /usr/include/c++/5/bits/functexcept.h \
+ /usr/include/c++/5/bits/exception_defines.h \
+ /usr/include/c++/5/bits/cpp_type_traits.h \
+ /usr/include/c++/5/ext/type_traits.h \
+ /usr/include/c++/5/ext/numeric_traits.h \
+ /usr/include/c++/5/bits/stl_pair.h /usr/include/c++/5/bits/move.h \
+ /usr/include/c++/5/bits/concept_check.h \
+ /usr/include/c++/5/bits/stl_iterator_base_types.h \
+ /usr/include/c++/5/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
+ /usr/include/c++/5/bits/ptr_traits.h \
+ /usr/include/c++/5/bits/predefined_ops.h \
+ /usr/include/c++/5/bits/allocator.h \
+ /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
+ /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/list.h
 console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  ../threads/copyright.h ../machine/console.h ../threads/utility.h \
  ../threads/copyright.h ../threads/bool.h ../machine/sysdep.h \
@@ -1881,20 +2030,14 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/utility.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
  ../filesys/openfile.h ../filesys/rwlock.h ../threads/list.h \
- ../machine/disk.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
+ ../filesys/openfile.h ../machine/disk.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1907,11 +2050,23 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/scheduler.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../userprog/bitmap.h \
+ /usr/include/c++/5/stdexcept /usr/include/c++/5/string \
+ /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1922,9 +2077,6 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -1936,7 +2088,6 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h \
  ../threads/synch.h
 pipe.o: ../filesys/pipe.cc /usr/include/stdc-predef.h ../filesys/pipe.h \
@@ -1956,19 +2107,13 @@ pipe.o: ../filesys/pipe.cc /usr/include/stdc-predef.h ../filesys/pipe.h \
  /usr/include/xlocale.h ../filesys/rwlock.h ../threads/list.h \
  ../threads/utility.h ../machine/disk.h ../threads/synch.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
- ../machine/disk.h ../userprog/addrspace.h ../filesys/filesys.h \
- ../threads/list.h ../threads/system.h ../threads/scheduler.h \
- ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
- ../threads/synch.h ../userprog/bitmap.h ../filesys/openfile.h \
- /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
+ ../filesys/openfile.h ../machine/disk.h ../userprog/addrspace.h \
+ ../filesys/filesys.h /usr/include/c++/5/set \
+ /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
  /usr/include/i386-linux-gnu/c++/5/bits/cpu_defines.h \
- /usr/include/c++/5/bits/atomic_lockfree_defines.h \
- /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
- /usr/include/c++/5/bits/memoryfwd.h \
- /usr/include/c++/5/bits/char_traits.h \
- /usr/include/c++/5/bits/stl_algobase.h \
  /usr/include/c++/5/bits/functexcept.h \
  /usr/include/c++/5/bits/exception_defines.h \
  /usr/include/c++/5/bits/cpp_type_traits.h \
@@ -1981,11 +2126,23 @@ pipe.o: ../filesys/pipe.cc /usr/include/stdc-predef.h ../filesys/pipe.h \
  /usr/include/c++/5/debug/debug.h /usr/include/c++/5/bits/stl_iterator.h \
  /usr/include/c++/5/bits/ptr_traits.h \
  /usr/include/c++/5/bits/predefined_ops.h \
- /usr/include/c++/5/bits/postypes.h /usr/include/c++/5/cwchar \
- /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/allocator.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++allocator.h \
  /usr/include/c++/5/ext/new_allocator.h /usr/include/c++/5/new \
+ /usr/include/c++/5/exception \
+ /usr/include/c++/5/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/5/bits/memoryfwd.h \
+ /usr/include/c++/5/bits/stl_function.h \
+ /usr/include/c++/5/backward/binders.h \
+ /usr/include/c++/5/ext/alloc_traits.h /usr/include/c++/5/bits/stl_set.h \
+ /usr/include/c++/5/bits/stl_multiset.h \
+ /usr/include/c++/5/bits/range_access.h ../threads/list.h \
+ ../threads/system.h ../threads/scheduler.h ../threads/synch.h \
+ ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
+ ../userprog/bitmap.h /usr/include/c++/5/stdexcept \
+ /usr/include/c++/5/string /usr/include/c++/5/bits/stringfwd.h \
+ /usr/include/c++/5/bits/char_traits.h /usr/include/c++/5/bits/postypes.h \
+ /usr/include/c++/5/cwchar /usr/include/i386-linux-gnu/bits/wchar.h \
  /usr/include/c++/5/bits/localefwd.h \
  /usr/include/i386-linux-gnu/c++/5/bits/c++locale.h \
  /usr/include/c++/5/clocale /usr/include/locale.h \
@@ -1996,9 +2153,6 @@ pipe.o: ../filesys/pipe.cc /usr/include/stdc-predef.h ../filesys/pipe.h \
  /usr/include/i386-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/5/bits/ostream_insert.h \
  /usr/include/c++/5/bits/cxxabi_forced.h \
- /usr/include/c++/5/bits/stl_function.h \
- /usr/include/c++/5/backward/binders.h \
- /usr/include/c++/5/bits/range_access.h \
  /usr/include/c++/5/bits/basic_string.h \
  /usr/include/c++/5/ext/atomicity.h \
  /usr/include/i386-linux-gnu/c++/5/bits/gthr.h \
@@ -2010,7 +2164,6 @@ pipe.o: ../filesys/pipe.cc /usr/include/stdc-predef.h ../filesys/pipe.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h \
  /usr/include/i386-linux-gnu/bits/setjmp.h \
  /usr/include/i386-linux-gnu/c++/5/bits/atomic_word.h \
- /usr/include/c++/5/ext/alloc_traits.h \
  /usr/include/c++/5/bits/basic_string.tcc ../filesys/synchdisk.h
 # DEPENDENCIES MUST END AT END OF FILE
 # IF YOU PUT STUFF HERE IT WILL GO AWAY

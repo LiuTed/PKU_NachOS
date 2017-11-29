@@ -32,9 +32,9 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/thread.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../threads/list.h ../machine/stats.h ../machine/timer.h \
- ../threads/utility.h ../threads/synch.h /usr/include/c++/5/stdexcept \
+ ../threads/scheduler.h ../threads/list.h ../threads/synch.h \
+ ../machine/interrupt.h ../threads/list.h ../machine/stats.h \
+ ../machine/timer.h ../threads/utility.h /usr/include/c++/5/stdexcept \
  /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -116,9 +116,9 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/_G_config.h /usr/include/wchar.h ../threads/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
- /usr/include/xlocale.h ../threads/thread.h ../threads/system.h \
- ../machine/interrupt.h ../threads/list.h ../machine/stats.h \
- ../machine/timer.h ../threads/utility.h ../threads/synch.h \
+ /usr/include/xlocale.h ../threads/thread.h ../threads/synch.h \
+ ../threads/system.h ../machine/interrupt.h ../threads/list.h \
+ ../machine/stats.h ../machine/timer.h ../threads/utility.h \
  /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -270,9 +270,9 @@ system.o: ../threads/system.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../threads/list.h \
- ../machine/stats.h ../machine/timer.h ../threads/utility.h \
- ../threads/synch.h /usr/include/c++/5/stdexcept \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../threads/list.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h /usr/include/c++/5/stdexcept \
  /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -424,9 +424,9 @@ threadtest.o: ../threads/threadtest.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/thread.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../threads/list.h \
- ../machine/stats.h ../machine/timer.h ../threads/utility.h \
- ../threads/synch.h /usr/include/c++/5/stdexcept \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../threads/list.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h /usr/include/c++/5/stdexcept \
  /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -494,9 +494,9 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/thread.h \
- ../threads/scheduler.h ../threads/list.h ../machine/interrupt.h \
- ../machine/stats.h ../machine/timer.h ../threads/utility.h \
- ../threads/synch.h /usr/include/c++/5/stdexcept \
+ ../threads/scheduler.h ../threads/list.h ../threads/synch.h \
+ ../machine/interrupt.h ../machine/stats.h ../machine/timer.h \
+ ../threads/utility.h /usr/include/c++/5/stdexcept \
  /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -607,8 +607,8 @@ sysdep.o: ../machine/sysdep.cc /usr/include/stdc-predef.h \
  ../machine/interrupt.h ../threads/list.h ../threads/copyright.h \
  ../threads/utility.h ../threads/bool.h ../machine/sysdep.h \
  ../threads/system.h ../threads/thread.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/utility.h ../threads/synch.h \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h ../threads/utility.h \
  /usr/include/c++/5/stdexcept /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -686,8 +686,8 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/system.h ../threads/utility.h \
  ../threads/thread.h ../threads/scheduler.h ../threads/list.h \
- ../machine/interrupt.h ../threads/list.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h /usr/include/c++/5/stdexcept \
+ ../threads/synch.h ../machine/interrupt.h ../threads/list.h \
+ ../machine/stats.h ../machine/timer.h /usr/include/c++/5/stdexcept \
  /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
@@ -773,8 +773,8 @@ elevator.o: ../machine/elevator.cc /usr/include/stdc-predef.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
  /usr/include/xlocale.h ../threads/list.h ../threads/utility.h \
  ../threads/system.h ../threads/thread.h ../threads/scheduler.h \
- ../threads/list.h ../machine/interrupt.h ../machine/stats.h \
- ../machine/timer.h ../threads/synch.h /usr/include/c++/5/stdexcept \
+ ../threads/list.h ../threads/synch.h ../machine/interrupt.h \
+ ../machine/stats.h ../machine/timer.h /usr/include/c++/5/stdexcept \
  /usr/include/c++/5/exception \
  /usr/include/i386-linux-gnu/c++/5/bits/c++config.h \
  /usr/include/i386-linux-gnu/c++/5/bits/os_defines.h \
