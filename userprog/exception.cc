@@ -25,6 +25,7 @@
 #include "system.h"
 #include "syscall.h"
 #include "openfile.h"
+extern void StartProcess(char*);
 
 int SwapPage(unsigned int vpn, int tid)
 {
@@ -108,6 +109,15 @@ static void IncPC()
 	machine->registers[PCReg] = machine->registers[NextPCReg];
 	machine->registers[NextPCReg] += 4;
 }
+static void readytorun(int start)
+{
+	currentThread->space->RestoreState();
+	machine->WriteRegister(PCReg, start);
+	machine->WriteRegister(NextPCReg, start+4);
+	machine->Run();
+	ASSERT(FALSE);
+}
+
 
 void
 ExceptionHandler(ExceptionType which)
@@ -128,10 +138,58 @@ ExceptionHandler(ExceptionType which)
 			case SC_Exit:
 			{
 			DEBUG('a', "program exited.\n");
-			printf("%s exited with code %d\n",
-				currentThread->getName(), machine->ReadRegister(4));
-			Exit(machine->ReadRegister(4));
-			//currentThread->Finish();
+			exit_code[currentThread->getTID()] =
+				machine->ReadRegister(4);
+			sem_list[currentThread->getTID()]->V();
+			currentThread->Finish();
+			break;
+			}
+
+			case SC_Yield:
+			{
+			currentThread->Yield();
+			break;
+			}
+
+			case SC_Join:
+			{
+			int id = machine->ReadRegister(4);
+			DEBUG('a', "waiting for thread %d\n", id);
+			sem_list[id]->P();
+			int code = exit_code[id];
+			waitforreap[id] = false;
+			sem_list[id]->V();
+			DEBUG('a', "join thread %d with exit code %d", id, code);
+			machine->WriteRegister(2, code);
+			break;
+			}
+
+			case SC_Exec:
+			{
+			int nameaddr = machine->ReadRegister(4);
+			char *name;
+			machine->ReadMemStr(nameaddr, NULL, name);
+			Thread *t = new Thread("exec");
+			machine->WriteRegister(2, t->getTID());
+			waitforreap[t->getTID()] = true;
+			t->Fork(StartProcess, (int)name);
+			break;
+			}
+
+			case SC_Fork:
+			{
+			int handler = machine->ReadRegister(4);
+			Thread *t = new Thread("fork", currentThread->getPriority());
+			t->space = currentThread->space;
+			currentThread->space->ref++;
+			for(std::set<int>::iterator i = currentThread->fds.begin();
+				i != currentThread->fds.end();
+				++i)
+			{
+				machine->fd_table[*i].cnt++;
+				t->fds.insert(*i);
+			}
+			t->Fork(readytorun, (void*)handler);
 			break;
 			}
 
@@ -253,12 +311,12 @@ ExceptionHandler(ExceptionType which)
     	//printf("page fault at virtual address %x\n" ,addr);
 		if(machine->tlb == NULL)
 		{
-			SwapPage(addr / PageSize, currentThread->getTID());
+			SwapPage(addr / PageSize, currentThread->space->tid);
 		}
 		else
 		{
 			int vpn = (unsigned)addr / PageSize,
-				idx = machine->find(vpn, currentThread->getTID());
+				idx = machine->find(vpn, currentThread->space->tid);
 
 			if (vpn >= machine->pageTableSize)
 			{
@@ -270,7 +328,7 @@ ExceptionHandler(ExceptionType which)
 			{
 				DEBUG('a', "virtual page # %d too large for page table size %d!\n", 
 					addr, machine->pageTableSize);
-				idx = SwapPage(vpn, currentThread->getTID());
+				idx = SwapPage(vpn, currentThread->space->tid);
 				ASSERT(idx < NumPhysPages);
 			}
 

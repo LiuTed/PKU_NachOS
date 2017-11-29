@@ -336,7 +336,7 @@ Machine::Translate(int virtAddr, int* physAddr, int size, bool writing)
 
 	if (tlb == NULL)
     {		// => page table => vpn is index into table
-    	unsigned int idx = find(vpn, currentThread->getTID());
+    	unsigned int idx = find(vpn, currentThread->space->tid);
     	if (vpn >= pageTableSize)
     	{
     		DEBUG('a', "virtual page # %d too large for page table size %d!\n", 
@@ -358,7 +358,7 @@ Machine::Translate(int virtAddr, int* physAddr, int size, bool writing)
     		if(!tlb[i]) continue;
 			if (tlb[i]->valid
 				&& (tlb[i]->virtualPage == vpn)
-				&& tlb[i]->tid == currentThread->getTID()
+				&& tlb[i]->tid == currentThread->space->tid
 				)
 			{
 				entry = tlb[i];	// FOUND!

@@ -20,6 +20,9 @@ Timer *timer;				// the hardware timer device,
 					// for invoking context switches
 
 Thread* thread_list[MaxThreadNum];
+Semaphore* sem_list[MaxThreadNum];
+int exit_code[MaxThreadNum];
+bool waitforreap[MaxThreadNum];
 
 #ifdef FILESYS_NEEDED
 FileSystem  *fileSystem;
@@ -131,6 +134,10 @@ Initialize(int argc, char **argv)
 	    argCount = 2;
 	}
 #endif
+    }
+    for(int i = 0; i < MaxThreadNum; i++)
+    {
+        sem_list[i] = new Semaphore("thread sem", 1);
     }
 
     DebugInit(debugArgs);			// initialize DEBUG messages

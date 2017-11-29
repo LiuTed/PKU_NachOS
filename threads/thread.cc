@@ -41,10 +41,12 @@ Thread::Thread(char* threadName, int _priority = 2)
     tid = uid = -1;
     for(int i=0; i<MaxThreadNum; i++)
     {
-        if(!thread_list[i])// find a free tid
+        if(!thread_list[i] && !waitforreap[i])
+        // find a free tid
         {
             tid = i;
             thread_list[i] = this;
+            sem_list[i]->P();
             break;
         }
     }
@@ -77,7 +79,7 @@ Thread::~Thread()
 
     ASSERT(this != currentThread);
     if (stack != NULL)
-	DeallocBoundedArray((char *) stack, StackSize * sizeof(int));
+	   DeallocBoundedArray((char *) stack, StackSize * sizeof(int));
 #ifdef USER_PROGRAM
     for(std::set<int>::iterator i = fds.begin();
         i != fds.end(); ++i)
@@ -92,9 +94,9 @@ Thread::~Thread()
             machine->fd_table[fd].file = NULL;
         }
     }
-    char buf[32];
-    snprintf(buf, 32, "vm_%d", tid);
-    fileSystem->Remove(buf);
+    space->ref--;
+    if(space->ref == 0)
+        delete space;
 #endif
     thread_list[tid] = NULL;
     printf("Thread \"%s\"(tid=%d) deleted\n", name, tid);

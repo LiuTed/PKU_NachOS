@@ -36,6 +36,9 @@ extern Timer *timer;				// the hardware alarm clock
 
 const int MaxThreadNum = 128;
 extern Thread* thread_list[MaxThreadNum];
+extern Semaphore* sem_list[MaxThreadNum];
+extern int exit_code[MaxThreadNum];
+extern bool waitforreap[MaxThreadNum];
 extern void TS();
 
 #ifdef USER_PROGRAM
